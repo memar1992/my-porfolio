@@ -1,6 +1,8 @@
 <script>
 	import reymar from '$lib/assets/reymar.png';
     import syncapps from '$lib/assets/syncapps.png';
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import ServiceCard from '$lib/components/ServiceCard.svelte';
 </script>
 
 <div class="rounded-sm dark:bg-[#1c1c1c] bg-[#f5f5f5] p-10 pb-0">
@@ -44,81 +46,31 @@
         </div>
 		<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 			<!-- Service 1 -->
-			<div
-				class="bg-white dark:bg-[#1c1c1c] p-6 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1"
-			>
-				<div class="text-amber-600 mb-4 text-3xl">
-					<i class="fas fa-code"></i>
-				</div>
-				<h3 class="text-xl font-semibold mb-2">Web Application Development</h3>
-				<p class="text-gray-600 dark:text-gray-400 text-sm">
-					Custom business systems and dashboards using Laravel, Vue, Svelte, or React.
-				</p>
-			</div>
+             <ServiceCard title="Web Application Development" description="Custom business systems and dashboards using Laravel, Vue, Svelte, or React." iconName="code" />
             <!-- Service 2 -->
-			<div
-            class="bg-white dark:bg-[#1c1c1c] p-6 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1"
-            >
-                <div class="text-amber-600 mb-4 text-3xl">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    Cross-platform mobile apps using React Native or Ionic.
-                </p>
-            </div>
-
+             <ServiceCard title="Mobile App Development" description="Cross-platform mobile apps using React Native or Ionic." iconName="mobile-alt" />
             <!-- Service 3 -->
-			<div
-            class="bg-white dark:bg-[#1c1c1c] p-6 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1"
-            >
-                <div class="text-amber-600 mb-4 text-3xl">
-                    <i class="fas fa-users-gear"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Backend & API Development</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    Secure APIs, integrations, and backend automation.
-                </p>
-            </div>
-
+             <ServiceCard title="Backend & API Development" description="Secure APIs, integrations, and backend automation." iconName="users-gear" />
             <!-- Service 4 -->
-			<div
-            class="bg-white dark:bg-[#1c1c1c] p-6 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1"
-            >
-                <div class="text-amber-600 mb-4 text-3xl">
-                    <i class="fas fa-screwdriver-wrench"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">System Maintenance & Optimization</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    Fix bugs, add new features, and keep your system running smoothly.
-                </p>
-            </div>
+             <ServiceCard title="System Maintenance & Optimization" description="Fix bugs, add new features, and keep your system running smoothly." iconName="screwdriver-wrench" />
             <!-- Service 5 -->
-            <div
-            class="bg-white dark:bg-[#1c1c1c] p-6 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1"
-            >
-                <div class="text-amber-600 mb-4 text-3xl">
-                    <i class="fas fa-puzzle-piece"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Plugin & Integration Development</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    Custom plugins and connectors for tools like Capacitor or internal platforms.
-                </p>
-            </div>
-
+             <ServiceCard title="Plugin & Integration Development" description="Custom plugins and connectors for tools like Capacitor or internal platforms." iconName="puzzle-piece" />
             <!-- Service 6 -->
-            <div
-            class="bg-gray-100 dark:bg-amber-500 p-6 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1"
-            >
-                <div class="text-amber-600 dark:text-amber-800 mb-4 text-3xl">
-                    <i class="fas fa-laptop-file"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2 dark:text-gray-800">Custom Development Services</h3>
-                <p class="text-gray-600 dark:text-gray-900 text-sm">
-                    Custom-built software that solves your real problems, not just adds more tools.
+            <ServiceCard title="Custom Development Services" description="Custom-built software that solves your real problems, not just adds more tools." isCustom={true} iconName="laptop-file" />
+		</div>
+        <div class="flex justify-center px-6 text-center my-10">
+            <div class="flex flex-col gap-2 w-1/2">
+                <h2 class="text-3xl font-bold">Other Services</h2>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    I also offer creative and visual services to support your brand or product.
                 </p>
             </div>
-		</div>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <ServiceCard title="Logo & Branding Design" description="Simple, memorable logos that capture your brand’s identity." iconName="palette" />
+            <ServiceCard title="Animation & Motion Design" description="Smooth, modern animations using Lottie for web and mobile apps." iconName="film" />
+            <ServiceCard title="Video Editing" description="Clean, professional edits for demos, social content, or presentations." iconName="video" />
+        </div>
 	</div>
 </section>
 
@@ -132,35 +84,25 @@
         </div>
     </div>
 
-    <div class="mx-auto">
-        <div class="grid lg:grid-cols-2 items-center rounded-sm overflow-hidden">
-            <!-- Left content -->
-            <div class="bg-white dark:bg-[#1c1c1c] text-gray-100 p-10 h-full flex flex-col justify-center">
-                <h2 class="text-2xl font-bold mb-4 text-amber-600">
-                    SyncApps Integration Platform
-                </h2>
-                <p class="text-gray-400 mb-6">
-                    A cloud-based platform that automates data synchronization between business apps, reducing manual work and errors.
-                    Built scalable backend flows and dashboards for managing integrations efficiently.
-                </p>
-    
-                <a href="/#" class="text-white font-semibold inline-flex items-center gap-1 hover:underline mb-6">
-                    Visit Site
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-    
-                <div class="border-t border-gray-700 pt-4 mt-auto">
-                    <p class="text-sm mb-4 text-gray-400"><span class="font-semibold text-gray-300">TECH:</span> Java (Play Framework), HTML, Alpine JS, PostgreSQL</p>
-                </div>
-                <div class="border-t border-gray-700 pt-4 mt-auto">
-                    <p class="text-sm text-gray-400"><span class="font-semibold text-gray-300">ROLE:</span> Backend and frontend developer — built automation logic, data sync flows, and internal dashboards.</p>
-                </div>
-            </div>
-    
-            <!-- Right image -->
-            <div class="h-full w-full">
-                <img src={syncapps} alt="SyncApps Dashboard" class="w-full h-full object-cover object-left">
-            </div>
-        </div>
+    <div class="mx-auto flex flex-col gap-10">
+        <ProjectCard 
+            projectThumbnail={syncapps} 
+            title="SyncApps Integration Platform" 
+            description="A cloud-based platform that automates data synchronization between business apps, reducing manual work and errors. Built scalable backend flows and dashboards for managing integrations efficiently." 
+            projectUrl="/#" 
+            tech="Java (Play Framework), HTML, Alpine JS, PostgreSQL" 
+            role="Backend and frontend developer — built automation logic, data sync flows, and internal dashboards."
+            buttonLabel="Visit Site"
+        />
+
+        <ProjectCard 
+            projectThumbnail={syncapps} 
+            title="Cazoomi.com" 
+            description="Corporate website for SyncApps by Cazoomi, showcasing products, pricing, and support." 
+            projectUrl="/#" 
+            tech="HTML, CSS, JavaScript, WordPress" 
+            role="Full-stack developer — optimized loading speed, improved SEO, and built responsive layouts."
+            buttonLabel="Visit Site"
+        />
     </div>
 </section>
