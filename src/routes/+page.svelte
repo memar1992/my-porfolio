@@ -1,5 +1,6 @@
 <script>
 	import reymar from '$lib/assets/reymar.png';
+    import syncapps from '$lib/assets/syncapps.png';
 </script>
 
 <div class="rounded-sm dark:bg-[#1c1c1c] bg-[#f5f5f5] p-10 pb-0">
@@ -33,8 +34,14 @@
 
 <section class="py-16">
 	<div class="text-center">
-		<h2 class="text-3xl font-bold mb-10">My Services</h2>
-
+        <div class="flex justify-center px-6 text-center mb-10">
+            <div class="flex flex-col gap-2 w-1/2">
+                <h2 class="text-3xl font-bold">My Services</h2>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    Whether you need a new app, a system upgrade, or a tool built just for your workflow, I can help bring it to life.
+                </p>
+            </div>
+        </div>
 		<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 			<!-- Service 1 -->
 			<div
@@ -113,4 +120,47 @@
             </div>
 		</div>
 	</div>
+</section>
+
+<section>
+    <div class="flex justify-center px-6 text-center mb-10">
+        <div class="flex flex-col gap-2 w-1/2">
+            <h2 class="text-3xl font-bold">My Projects</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Selected projects that showcase my experience in full-stack web and mobile development.
+            </p>
+        </div>
+    </div>
+
+    <div class="mx-auto">
+        <div class="grid lg:grid-cols-2 items-center rounded-sm overflow-hidden">
+            <!-- Left content -->
+            <div class="bg-white dark:bg-[#1c1c1c] text-gray-100 p-10 h-full flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-4 text-amber-600">
+                    SyncApps Integration Platform
+                </h2>
+                <p class="text-gray-400 mb-6">
+                    A cloud-based platform that automates data synchronization between business apps, reducing manual work and errors.
+                    Built scalable backend flows and dashboards for managing integrations efficiently.
+                </p>
+    
+                <a href="/#" class="text-white font-semibold inline-flex items-center gap-1 hover:underline mb-6">
+                    Visit Site
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+    
+                <div class="border-t border-gray-700 pt-4 mt-auto">
+                    <p class="text-sm mb-4 text-gray-400"><span class="font-semibold text-gray-300">TECH:</span> Java (Play Framework), HTML, Alpine JS, PostgreSQL</p>
+                </div>
+                <div class="border-t border-gray-700 pt-4 mt-auto">
+                    <p class="text-sm text-gray-400"><span class="font-semibold text-gray-300">ROLE:</span> Backend and frontend developer — built automation logic, data sync flows, and internal dashboards.</p>
+                </div>
+            </div>
+    
+            <!-- Right image -->
+            <div class="h-full w-full">
+                <img src={syncapps} alt="SyncApps Dashboard" class="w-full h-full object-cover object-left">
+            </div>
+        </div>
+    </div>
 </section>

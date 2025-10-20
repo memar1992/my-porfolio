@@ -1,23 +1,22 @@
 <script lang="ts">
 	import '../app.css';
 	import { page } from '$app/stores';
-	import favicon from '$lib/assets/favicon.svg';
+	import reymar_favicon from '$lib/assets/reymar.svg';
+	import ProfileCard from '$lib/components/ProfileCard.svelte';
+	import reymar from '$lib/assets/reymar_2.jpg';
 	
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={reymar_favicon} />
 </svelte:head>
 
 <div class="bg-gray-100 text-gray-900 dark:bg-[#121212] dark:text-[#d5d5d5] h-auto">
 	<div class="p-10">
 		<div class="flex flex-row gap-10">
-			<div class="basis-1/4">
-				<div class="flex flex-col text-center px-2">
-					<img src="" alt="">
-					Reymar Ocero
-				</div>
+			<div class="basis-1/5">
+				<ProfileCard image={reymar} name={'Reymar Ocero'} />
 			</div>
   			<div class="flex-1">
 				<main>
