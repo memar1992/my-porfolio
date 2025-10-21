@@ -3,6 +3,13 @@
     import syncapps from '$lib/assets/syncapps.png';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import ServiceCard from '$lib/components/ServiceCard.svelte';
+    import login_animation_new from '$lib/assets/login_animation-min.png';
+    import cazoomi_video from '$lib/assets/cazoomi_video.png';
+    import syncapps_dashboard from '$lib/assets/syncapps_dashboard.png';
+    import cazoomi_site from '$lib/assets/cazoomi_site.png';
+    import mobile_stl_app from '$lib/assets/mobile_stl_app.png';
+    import stl_admin from '$lib/assets/stl_admin.png';
+    import auto_invoice from '$lib/assets/auto_invoice.png';
 </script>
 
 <div class="rounded-sm dark:bg-[#1c1c1c] bg-[#f5f5f5] p-10 pb-0">
@@ -21,7 +28,7 @@
 					<button
 						class="transition duration-300 ease-in-out rounded-full text-amber-500 dark:text-gray-900 bg-amber-100 dark:bg-[#f48f40] px-10 py-4 text-center font-bold cursor-pointer hover:bg-gray-800 hover:text-white"
 					>
-						See my work
+						Contact me
 					</button>
 				</div>
 			</div>
@@ -86,7 +93,7 @@
 
     <div class="mx-auto flex flex-col gap-10">
         <ProjectCard 
-            projectThumbnail={syncapps} 
+            projectThumbnail={syncapps_dashboard} 
             title="SyncApps Integration Platform" 
             description="A cloud-based platform that automates data synchronization between business apps, reducing manual work and errors. Built scalable backend flows and dashboards for managing integrations efficiently." 
             projectUrl="/#" 
@@ -96,7 +103,7 @@
         />
 
         <ProjectCard 
-            projectThumbnail={syncapps} 
+            projectThumbnail={cazoomi_site} 
             title="Cazoomi.com" 
             description="Corporate website for SyncApps by Cazoomi, showcasing products, pricing, and support." 
             projectUrl="/#" 
@@ -106,33 +113,65 @@
         />
 
         <ProjectCard 
-            projectThumbnail={syncapps} 
+            projectThumbnail={mobile_stl_app} 
             title="STL Mobile Betting App" 
             description="Mobile app used by STL agents and bettors for submitting results and tracking daily reports." 
             projectUrl="/#" 
             tech="Laravel API, React, Ionic, Capacitor" 
             role="Lead Mobile developer, API integration, and Lead UX/UI designer."
             buttonLabel="Visit Site"
+            isHideButton={true}
         />
 
         <ProjectCard 
-            projectThumbnail={syncapps} 
+            projectThumbnail={stl_admin} 
             title="STL Admin System" 
             description="Admin dashboard for Small Town Lottery operations, managing results, agents, and reporting." 
             projectUrl="/#" 
             tech="Laravel, Alpine JS, MySQL" 
             role="Full-stack developer — built dashboards, role-based access, and analytics features."
             buttonLabel="Visit Site"
+            isHideButton={true}
         />
 
         <ProjectCard 
-            projectThumbnail={syncapps} 
-            title="Auto Invoicing System" 
+            projectThumbnail={auto_invoice} 
+            title="Auto Invoicing Command" 
             description="A backend system that generates and emails invoices automatically based on usage and schedules." 
             projectUrl="/#" 
             tech="NodeJS" 
             role="Backend developer — built recurring billing logic, PDF generation, and email delivery."
-            buttonLabel="Visit Site"
+            buttonLabel="Checkout Repo"
+        />
+    </div>
+
+    <div class="flex justify-center px-6 text-center my-10">
+        <div class="flex flex-col gap-2 w-1/2">
+            <h2 class="text-3xl font-bold">Other Projects (Creative Work)</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+                A look into my creative side — where I explore animation, motion design, and video editing to bring more life and personality into digital projects.
+            </p>
+        </div>
+    </div>
+    <div class="mx-auto flex flex-col gap-10">
+        <ProjectCard 
+            projectThumbnail={login_animation_new} 
+            title="SyncApps Login Animation" 
+            description="Created a smooth login animation using Lottie to make the user experience more engaging and modern. Focused on clean motion, lightweight performance, and visual flow that complements the brand’s simplicity." 
+            projectUrl="/#" 
+            tech="Lottie, JSON Animation, HTML" 
+            role="Motion designer & front-end developer — integrated and optimized the animation for web."
+            buttonLabel="View animation"
+        />
+
+        <ProjectCard 
+            projectThumbnail={cazoomi_video} 
+            title="Cazoomi Video" 
+            description="Edited and produced a company video that introduces integration features and product highlights. Combined motion graphics, subtle transitions, and sound design to create a clear, professional story for the brand." 
+            projectUrl="/#" 
+            tech="Adobe Premiere Pro, After Effects, Lottie" 
+            role="Video editor & motion designer — handled editing, animation, and overall creative direction."
+            buttonLabel="View Videos"
         />
     </div>
 </section>

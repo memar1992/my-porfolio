@@ -7,6 +7,7 @@
     export let tech:string = 'Java, HTML, PostgreSQL';
     export let role:string = 'Backend Developer';
     export let buttonLabel:string = 'Visit Site';
+    export let isHideButton:boolean = false;
 </script>
 
 <div class="grid lg:grid-cols-2 items-center rounded-sm overflow-hidden">
@@ -19,10 +20,12 @@
             {description}
         </p>
 
+        {#if !isHideButton}
         <a href="{projectUrl}" class="text-white font-semibold inline-flex items-center gap-1 hover:underline mb-6">
             {buttonLabel}
             <i class="fas fa-external-link-alt"></i>
         </a>
+        {/if}
 
         <div class="border-t border-gray-700 pt-4 mt-auto">
             <p class="text-sm mb-4 text-gray-400"><span class="font-semibold text-gray-300">TECH:</span>
