@@ -104,5 +104,35 @@
             role="Full-stack developer — optimized loading speed, improved SEO, and built responsive layouts."
             buttonLabel="Visit Site"
         />
+
+        <ProjectCard 
+            projectThumbnail={syncapps} 
+            title="STL Mobile Betting App" 
+            description="Mobile app used by STL agents and bettors for submitting results and tracking daily reports." 
+            projectUrl="/#" 
+            tech="Laravel API, React, Ionic, Capacitor" 
+            role="Lead Mobile developer, API integration, and Lead UX/UI designer."
+            buttonLabel="Visit Site"
+        />
+
+        <ProjectCard 
+            projectThumbnail={syncapps} 
+            title="STL Admin System" 
+            description="Admin dashboard for Small Town Lottery operations, managing results, agents, and reporting." 
+            projectUrl="/#" 
+            tech="Laravel, Alpine JS, MySQL" 
+            role="Full-stack developer — built dashboards, role-based access, and analytics features."
+            buttonLabel="Visit Site"
+        />
+
+        <ProjectCard 
+            projectThumbnail={syncapps} 
+            title="Auto Invoicing System" 
+            description="A backend system that generates and emails invoices automatically based on usage and schedules." 
+            projectUrl="/#" 
+            tech="NodeJS" 
+            role="Backend developer — built recurring billing logic, PDF generation, and email delivery."
+            buttonLabel="Visit Site"
+        />
     </div>
 </section>
