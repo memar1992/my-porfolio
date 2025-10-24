@@ -21,7 +21,7 @@
         </p>
 
         {#if !isHideButton}
-        <a href="{projectUrl}" class="text-white font-semibold inline-flex items-center gap-1 hover:underline mb-6">
+        <a href="{projectUrl}" target="_blank" class="text-white font-semibold inline-flex items-center gap-1 hover:underline mb-6">
             {buttonLabel}
             <i class="fas fa-external-link-alt"></i>
         </a>

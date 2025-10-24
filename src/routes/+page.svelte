@@ -94,7 +94,7 @@
             projectThumbnail={syncapps_dashboard} 
             title="SyncApps Integration Platform" 
             description="A cloud-based platform that automates data synchronization between business apps, reducing manual work and errors. Built scalable backend flows and dashboards for managing integrations efficiently." 
-            projectUrl="/#" 
+            projectUrl="https://syncapps.cazoomi.com/login" 
             tech="Java (Play Framework), HTML, Alpine JS, PostgreSQL" 
             role="Backend and frontend developer — built automation logic, data sync flows, and internal dashboards."
             buttonLabel="Visit Site"
@@ -104,7 +104,7 @@
             projectThumbnail={cazoomi_site} 
             title="Cazoomi.com" 
             description="Corporate website for SyncApps by Cazoomi, showcasing products, pricing, and support." 
-            projectUrl="/#" 
+            projectUrl="https://www.cazoomi.com/" 
             tech="HTML, CSS, JavaScript, WordPress" 
             role="Full-stack developer — optimized loading speed, improved SEO, and built responsive layouts."
             buttonLabel="Visit Site"
@@ -136,7 +136,7 @@
             projectThumbnail={auto_invoice} 
             title="Auto Invoicing Command" 
             description="A backend system that generates and emails invoices automatically based on usage and schedules." 
-            projectUrl="/#" 
+            projectUrl="https://github.com/memar1992/invoice-generator" 
             tech="NodeJS" 
             role="Backend developer — built recurring billing logic, PDF generation, and email delivery."
             buttonLabel="Checkout Repo"
@@ -156,7 +156,7 @@
             projectThumbnail={login_animation_new} 
             title="SyncApps Login Animation" 
             description="Created a smooth login animation using Lottie to make the user experience more engaging and modern. Focused on clean motion, lightweight performance, and visual flow that complements the brand’s simplicity." 
-            projectUrl="/#" 
+            projectUrl="https://cdn.lottielab.com/l/7dpcHjQG7fq9gP.html" 
             tech="Lottie, JSON Animation, HTML" 
             role="Motion designer & front-end developer — integrated and optimized the animation for web."
             buttonLabel="View animation"
@@ -166,7 +166,7 @@
             projectThumbnail={cazoomi_video} 
             title="Cazoomi Video" 
             description="Edited and produced a company video that introduces integration features and product highlights. Combined motion graphics, subtle transitions, and sound design to create a clear, professional story for the brand." 
-            projectUrl="/#" 
+            projectUrl="https://www.youtube.com/@SyncAppsbyCazoomi" 
             tech="Adobe Premiere Pro, After Effects, Lottie" 
             role="Video editor & motion designer — handled editing, animation, and overall creative direction."
             buttonLabel="View Videos"
