@@ -25,8 +25,8 @@
 			</div>
 			<div class="w-24 flex-none">
 				<nav class="flex flex-col">
-					<a href="/" class:text-amber-500={$page.url.pathname === '/'}>Home</a>
-					<a href="/about" class:text-amber-500={$page.url.pathname === '/about'}>About</a>
+					<a href="/" class:text-lime-500={$page.url.pathname === '/'}>Home</a>
+					<a href="/about" class:text-lime-500={$page.url.pathname === '/about'}>About</a>
 				</nav>
 			</div>
 		</div>

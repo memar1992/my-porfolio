@@ -13,7 +13,7 @@
 <div class="grid lg:grid-cols-2 items-center rounded-sm overflow-hidden">
     <!-- Left content -->
     <div class="bg-white dark:bg-[#1c1c1c] text-gray-100 p-10 h-full flex flex-col justify-center">
-        <h2 class="text-2xl font-bold mb-4 text-amber-600">
+        <h2 class="text-2xl font-bold mb-4 text-lime-600">
             {title}
         </h2>
         <p class="text-gray-400 mb-6">

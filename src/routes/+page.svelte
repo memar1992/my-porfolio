@@ -26,7 +26,7 @@
 				</p>
 				<div class="flex-none">
 					<button
-						class="transition duration-300 ease-in-out rounded-full text-amber-500 dark:text-gray-900 bg-amber-100 dark:bg-[#f48f40] px-10 py-4 text-center font-bold cursor-pointer hover:bg-gray-800 hover:text-white"
+						class="transition duration-300 ease-in-out rounded-full text-lime-500 dark:text-gray-900 bg-amber-100 dark:bg-lime-500 px-10 py-4 text-center font-bold cursor-pointer hover:bg-gray-800 hover:text-white"
 					>
 						Contact me
 					</button>
