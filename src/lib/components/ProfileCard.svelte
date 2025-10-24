@@ -23,31 +23,31 @@
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard
                 label={'PHP'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fa-brands fa-php'}
             />
 
             <SkillDetailsCard
                 label={'JavaScript'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fa-brands fa-js'}
             />
 
             <SkillDetailsCard
                 label={'Java'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fa-brands fa-java'}
             />
 
             <SkillDetailsCard
                 label={'HTML'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fa-brands fa-html5'}
             />
 
             <SkillDetailsCard
                 label={'CSS'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fa-brands fa-css3'}
             />
             
@@ -58,49 +58,49 @@
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard 
                 label={'Laravel'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fa-brands fa-laravel'}
             />
 
             <SkillDetailsCard 
                 label={'Play Framework'}
-                percentage={80}
+                percentage={'w-80/100 z-10'}
                 icon={'fas fa-play'}
             />
 
             <SkillDetailsCard 
                 label={'NodeJS'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fa-brands fa-node-js'}
             />
 
             <SkillDetailsCard 
                 label={'ExpressJS'}
-                percentage={70}
+                percentage={'w-70/100 z-10'}
                 icon={'fas fa-thumbs-up'}
             />
 
             <SkillDetailsCard 
                 label={'NestJS'}
-                percentage={70}
+                percentage={'w-70/100 z-10'}
                 icon={'fas fa-thumbs-up'}
             />
 
             <SkillDetailsCard 
                 label={'React'}
-                percentage={100}
+                percentage={'w-100/100 z-10'}
                 icon={'fa-brands fa-react'}
             />
 
             <SkillDetailsCard 
                 label={'React Native'}
-                percentage={100}
+                percentage={'w-100/100 z-10'}
                 icon={'fa-brands fa-react'}
             />
 
             <SkillDetailsCard 
                 label={'Flutter'}
-                percentage={60}
+                percentage={'w-60/100 z-10'}
                 icon={'fa-brands fa-flutter'}
             />
         </div>
@@ -110,19 +110,19 @@
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard 
                 label={'MySQL'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fas fa-database'}
             />
 
             <SkillDetailsCard 
                 label={'PostGreSQL'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fas fa-database'}
             />
 
             <SkillDetailsCard 
                 label={'Supabase'}
-                percentage={90}
+                percentage={'w-90/100 z-10'}
                 icon={'fas fa-database'}
             />
         </div>
@@ -132,15 +132,13 @@
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard 
                 label={'Rackspace'}
-                percentage={90}
-                color={'red'}
+                percentage={'w-90/100 z-10'}
                 icon={'fas fa-database'}
             />
 
             <SkillDetailsCard 
                 label={'AWS'}
-                percentage={90}
-                color={'lime'}
+                percentage={'w-90/100 z-10'}
                 icon={'fas fa-database'}
             />
         </div>
