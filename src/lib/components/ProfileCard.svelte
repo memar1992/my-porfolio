@@ -1,4 +1,6 @@
 <script lang="ts">
+	import SkillDetailsCard from "./SkillDetailsCard.svelte";
+
     export let image:string = '';
     export let name:string = 'Reymar Ocero'
 </script>
@@ -18,66 +20,129 @@
         <!-- list of skills -->
         <span class="block mt-5 font-semibold text-gray-600">Programming Languages</span>
 
-        <div class="flex flex-col gap-8">
-            <div class="flex flex-col gap-2 items-start">
-                <p class="text-sm text-blue-600">
-                    <i class="fa-brands fa-php"></i> PHP
-                </p>
-                <div class="relative w-full">
-                    <div class="absolute top-0 left-0 h-2 bg-blue-600 rounded-full w-90/100 z-10"></div>
-                    <div class="absolute top-0 left-0 h-2 bg-gray-800 rounded-full w-full"></div>
-                </div>
-            </div>
+        <div class="flex flex-col gap-8 mb-10">
+            <SkillDetailsCard
+                label={'PHP'}
+                percentage={90}
+                icon={'fa-brands fa-php'}
+            />
 
-            <div class="flex flex-col gap-2 items-start">
-                <p class="text-sm text-red-600">
-                    <i class="fa-brands fa-java"></i> JAVA
-                </p>
-                <div class="relative w-full">
-                    <div class="absolute top-0 left-0 h-2 bg-red-500 rounded-full w-80/100 z-10"></div>
-                    <div class="absolute top-0 left-0 h-2 bg-gray-800 rounded-full w-full"></div>
-                </div>
-            </div>
+            <SkillDetailsCard
+                label={'JavaScript'}
+                percentage={90}
+                icon={'fa-brands fa-js'}
+            />
 
-            <div class="flex flex-col gap-2 items-start">
-                <p class="text-sm text-yellow-600">
-                    <i class="fa-brands fa-js"></i> JavaScript
-                </p>
-                <div class="relative w-full">
-                    <div class="absolute top-0 left-0 h-2 bg-yellow-500 rounded-full w-100/100 z-10"></div>
-                    <div class="absolute top-0 left-0 h-2 bg-gray-800 rounded-full w-full"></div>
-                </div>
-            </div>
+            <SkillDetailsCard
+                label={'Java'}
+                percentage={90}
+                icon={'fa-brands fa-java'}
+            />
 
-            <div class="flex flex-col gap-2 items-start">
-                <p class="text-sm text-orange-600">
-                    <i class="fa-brands fa-html5"></i> HTML
-                </p>
-                <div class="relative w-full">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded-full w-100/100 z-10"></div>
-                    <div class="absolute top-0 left-0 h-2 bg-gray-800 rounded-full w-full"></div>
-                </div>
-            </div>
+            <SkillDetailsCard
+                label={'HTML'}
+                percentage={90}
+                icon={'fa-brands fa-html5'}
+            />
 
-            <div class="flex flex-col gap-2 items-start">
-                <p class="text-sm text-blue-600">
-                    <i class="fa-brands fa-css3"></i> CSS3
-                </p>
-                <div class="relative w-full">
-                    <div class="absolute top-0 left-0 h-2 bg-blue-500 rounded-full w-100/100 z-10"></div>
-                    <div class="absolute top-0 left-0 h-2 bg-gray-800 rounded-full w-full"></div>
-                </div>
-            </div>
+            <SkillDetailsCard
+                label={'CSS'}
+                percentage={90}
+                icon={'fa-brands fa-css3'}
+            />
+            
+        </div>
 
-            <div class="flex flex-col gap-2 items-start">
-                <p class="text-sm text-red-600">
-                    <i class="fas fa-database"></i> MySQL
-                </p>
-                <div class="relative w-full">
-                    <div class="absolute top-0 left-0 h-2 bg-red-500 rounded-full w-60/100 z-10"></div>
-                    <div class="absolute top-0 left-0 h-2 bg-gray-800 rounded-full w-full"></div>
-                </div>
-            </div>
+        <span class="block mt-5 font-semibold text-gray-600">Frameworks Used</span>
+
+        <div class="flex flex-col gap-8 mb-10">
+            <SkillDetailsCard 
+                label={'Laravel'}
+                percentage={90}
+                icon={'fa-brands fa-laravel'}
+            />
+
+            <SkillDetailsCard 
+                label={'Play Framework'}
+                percentage={80}
+                icon={'fas fa-play'}
+            />
+
+            <SkillDetailsCard 
+                label={'NodeJS'}
+                percentage={90}
+                icon={'fa-brands fa-node-js'}
+            />
+
+            <SkillDetailsCard 
+                label={'ExpressJS'}
+                percentage={70}
+                icon={'fas fa-thumbs-up'}
+            />
+
+            <SkillDetailsCard 
+                label={'NestJS'}
+                percentage={70}
+                icon={'fas fa-thumbs-up'}
+            />
+
+            <SkillDetailsCard 
+                label={'React'}
+                percentage={100}
+                icon={'fa-brands fa-react'}
+            />
+
+            <SkillDetailsCard 
+                label={'React Native'}
+                percentage={100}
+                icon={'fa-brands fa-react'}
+            />
+
+            <SkillDetailsCard 
+                label={'Flutter'}
+                percentage={60}
+                icon={'fa-brands fa-flutter'}
+            />
+        </div>
+
+        <span class="block mt-5 font-semibold text-gray-600">Databases</span>
+
+        <div class="flex flex-col gap-8 mb-10">
+            <SkillDetailsCard 
+                label={'MySQL'}
+                percentage={90}
+                icon={'fas fa-database'}
+            />
+
+            <SkillDetailsCard 
+                label={'PostGreSQL'}
+                percentage={90}
+                icon={'fas fa-database'}
+            />
+
+            <SkillDetailsCard 
+                label={'Supabase'}
+                percentage={90}
+                icon={'fas fa-database'}
+            />
+        </div>
+
+        <span class="block mt-5 font-semibold text-gray-600">Servers</span>
+
+        <div class="flex flex-col gap-8 mb-10">
+            <SkillDetailsCard 
+                label={'Rackspace'}
+                percentage={90}
+                color={'red'}
+                icon={'fas fa-database'}
+            />
+
+            <SkillDetailsCard 
+                label={'AWS'}
+                percentage={90}
+                color={'lime'}
+                icon={'fas fa-database'}
+            />
         </div>
         
     </div>
