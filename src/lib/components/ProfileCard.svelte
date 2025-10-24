@@ -5,7 +5,7 @@
     export let name:string = 'Reymar Ocero'
 </script>
 
-<div class="rounded-sm dark:bg-[#1c1c1c] bg-[#f5f5f5] p-5">
+<div class="rounded-sm dark:bg-[#1c1c1c] bg-[#f5f5f5] p-5 h-full">
     <div class="flex flex-col px-2 gap-2">
         <div class="relative">
             <div class="w-4 h-4 absolute bottom-[20px] right-[65px] bg-lime-600 rounded-full"></div>
@@ -56,6 +56,13 @@
         <span class="block mt-5 font-semibold text-gray-600">Frameworks Used</span>
 
         <div class="flex flex-col gap-8 mb-10">
+
+            <SkillDetailsCard 
+                label={'WordPress'}
+                percentage={'w-100/100 z-10'}
+                icon={'fa-brands fa-wordpress'}
+            />
+
             <SkillDetailsCard 
                 label={'Laravel'}
                 percentage={'w-90/100 z-10'}

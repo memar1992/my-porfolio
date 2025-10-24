@@ -24,12 +24,10 @@
 					I build web and mobile applications that help businesses work smarter. I’ve worked on
 					various custom tools and systems for automation and daily operations.
 				</p>
-				<div class="flex-none">
-					<button
-						class="transition duration-300 ease-in-out rounded-full text-lime-500 dark:text-gray-900 bg-amber-100 dark:bg-lime-500 px-10 py-4 text-center font-bold cursor-pointer hover:bg-gray-800 hover:text-white"
-					>
+				<div class="block">
+					<a href="/contact" class="transition duration-300 ease-in-out rounded-full text-lime-500 dark:text-gray-900 bg-amber-100 dark:bg-lime-500 px-10 py-4 text-center font-bold cursor-pointer hover:bg-gray-800 hover:text-white block w-50">
 						Contact me
-					</button>
+                    </a>
 				</div>
 			</div>
 		</div>

@@ -1,11 +1,19 @@
 <script lang="ts">
 	import '../app.css';
-	import { page } from '$app/stores';
 	import reymar_favicon from '$lib/assets/reymar.svg';
 	import ProfileCard from '$lib/components/ProfileCard.svelte';
 	import reymar from '$lib/assets/reymar_2.jpg';
+
+	import type { NavType } from '$lib/types/NavType';
+	import NavCard from '$lib/components/NavCard.svelte';
 	
 	let { children } = $props();
+
+	let navs: NavType[] = [
+		{ name: 'Home', href: '/', icon: 'fa-solid fa-house' },
+		{ name: 'About', href: '/about', icon: 'fa-solid fa-user-tie' },
+		{ name: 'Contact', href: '/contact', icon: 'fa-solid fa-envelope' },
+	]
 </script>
 
 <svelte:head>
@@ -24,10 +32,7 @@
 				</main>
 			</div>
 			<div class="w-24 flex-none">
-				<nav class="flex flex-col">
-					<a href="/" class:text-lime-500={$page.url.pathname === '/'}>Home</a>
-					<a href="/about" class:text-lime-500={$page.url.pathname === '/about'}>About</a>
-				</nav>
+				<NavCard navs={navs} />
 			</div>
 		</div>
 		
