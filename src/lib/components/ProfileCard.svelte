@@ -89,7 +89,7 @@
 
             <SkillDetailsCard 
                 label={'NestJS'}
-                percentage={'w-70/100 z-10'}
+                percentage={'w-50/100 z-10'}
                 icon={'fas fa-thumbs-up'}
             />
 
@@ -147,6 +147,38 @@
                 label={'AWS'}
                 percentage={'w-90/100 z-10'}
                 icon={'fas fa-database'}
+            />
+        </div>
+
+        <span class="block mt-5 font-semibold text-gray-600">Design tools</span>
+
+        <div class="flex flex-col gap-8 mb-10">
+            <SkillDetailsCard 
+                label={'Figma'}
+                percentage={'w-100/100 z-10'}
+                icon={'fa-brands fa-figma'}
+            />
+
+            <SkillDetailsCard 
+                label={'Adobe Products'}
+                percentage={'w-100/100 z-10'}
+                icon={'fas fa-check'}
+            />
+        </div>
+
+        <span class="block mt-5 font-semibold text-gray-600">Version control</span>
+
+        <div class="flex flex-col gap-8 mb-10">
+            <SkillDetailsCard 
+                label={'Bitbucket'}
+                percentage={'w-100/100 z-10'}
+                icon={'fa-brands fa-bitbucket'}
+            />
+
+            <SkillDetailsCard 
+                label={'GitHub'}
+                percentage={'w-100/100 z-10'}
+                icon={'fa-brands fa-github'}
             />
         </div>
         
