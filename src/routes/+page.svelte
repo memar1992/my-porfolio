@@ -24,10 +24,25 @@
 					I build web and mobile applications that help businesses work smarter. I’ve worked on
 					various custom tools and systems for automation and daily operations.
 				</p>
-				<div class="block">
+				<div class="flex flex-row gap-10 items-center">
 					<a href="/contact" class="transition duration-300 ease-in-out rounded-full text-lime-500 dark:text-gray-900 bg-amber-100 dark:bg-lime-500 px-10 py-4 text-center font-bold cursor-pointer hover:bg-gray-800 hover:text-white block w-50">
 						Contact me
                     </a>
+                    <div class="flex flex-row gap-5">
+                        <!-- Social Links -->
+                        <a href="https://github.com/memar1992/" target="_blank" rel="noopener"
+                        class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+                        <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/reymar-ocero-b252a8131/" target="_blank" rel="noopener"
+                        class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/reymar.maagad.ocero" target="_blank" rel="noopener"
+                        class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+                        <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
 				</div>
 			</div>
 		</div>
