@@ -3,6 +3,8 @@
 	import reymar_favicon from '$lib/assets/reymar.svg';
 	import ProfileCard from '$lib/components/ProfileCard.svelte';
 	import reymar from '$lib/assets/reymar_2.jpg';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit'
+	import { dev } from '$app/environment';
 
 	import type { NavType } from '$lib/types/NavType';
 	import NavCard from '$lib/components/NavCard.svelte';
@@ -14,6 +16,8 @@
 		{ name: 'About', href: '/about', icon: 'fa-solid fa-user-tie' },
 		{ name: 'Contact', href: '/contact', icon: 'fa-solid fa-envelope' },
 	]
+
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
 <svelte:head>
@@ -29,7 +33,9 @@
   			<div class="flex-1">
 				<main>
 					{@render children?.()}
+					<Analytics />
 				</main>
+				
 			</div>
 			<div class="w-24 flex-none">
 				<NavCard navs={navs} />
