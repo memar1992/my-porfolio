@@ -33,7 +33,6 @@
   			<div class="flex-1">
 				<main>
 					{@render children?.()}
-					<Analytics />
 				</main>
 				
 			</div>
