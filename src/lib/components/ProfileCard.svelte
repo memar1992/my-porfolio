@@ -110,6 +110,12 @@
                 percentage={'w-60/100 z-10'}
                 icon={'fa-brands fa-flutter'}
             />
+
+            <SkillDetailsCard 
+                label={'Svelte'}
+                percentage={'w-100/100 z-10'}
+                icon={'fas fa-code'}
+            />
         </div>
 
         <span class="block mt-5 font-semibold text-gray-600">Databases</span>
