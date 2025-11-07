@@ -6,6 +6,7 @@
     import login_animation_new from '$lib/assets/login_animation-min.png';
     import cazoomi_video from '$lib/assets/cazoomi_video.png';
     import syncapps_dashboard from '$lib/assets/syncapps_dashboard.png';
+    import shortscribeDashboard from '$lib/assets/shortscribe_dashboard_2.png'
     import cazoomi_site from '$lib/assets/cazoomi_site.png';
     import mobile_stl_app from '$lib/assets/mobile_stl_app.png';
     import stl_admin from '$lib/assets/stl_admin.png';
@@ -105,6 +106,17 @@
     </div>
 
     <div class="mx-auto flex flex-col gap-10">
+
+        <ProjectCard 
+            projectThumbnail={shortscribeDashboard} 
+            title="Shortscribe" 
+            description="Turn your ideas into viral short-form scripts in seconds. Shortscribe rewrites your text into catchy, natural, and ready-to-record scripts for YouTube Shorts, TikTok, and Facebook Reels." 
+            projectUrl="https://www.shortscribe.online/" 
+            tech="Svelte, ExpressJS, and Supabase" 
+            role="Backend and frontend developer — built rewrite logic with AI"
+            buttonLabel="Visit Site"
+        />
+
         <ProjectCard 
             projectThumbnail={syncapps_dashboard} 
             title="SyncApps Integration Platform" 
