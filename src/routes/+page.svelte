@@ -7,6 +7,7 @@
     import cazoomi_video from '$lib/assets/cazoomi_video.png';
     import syncapps_dashboard from '$lib/assets/syncapps_dashboard.png';
     import shortscribeDashboard from '$lib/assets/shortscribe_dashboard_2.png'
+    import forecastedFitBanner from '$lib/assets/forecastedfit_banner.png';
     import cazoomi_site from '$lib/assets/cazoomi_site.png';
     import mobile_stl_app from '$lib/assets/mobile_stl_app.png';
     import stl_admin from '$lib/assets/stl_admin.png';
@@ -27,7 +28,7 @@
 				</p>
 				<div class="flex flex-row gap-10 items-center">
 					<a href="/contact" class="transition duration-300 ease-in-out rounded-full text-lime-500 dark:text-gray-900 bg-amber-100 dark:bg-lime-500 px-10 py-4 text-center font-bold cursor-pointer hover:bg-gray-800 hover:text-white block w-50">
-						Contact me
+						Hire me
                     </a>
                     <div class="flex flex-row gap-5">
                         <!-- Social Links -->
@@ -106,6 +107,16 @@
     </div>
 
     <div class="mx-auto flex flex-col gap-10">
+
+        <ProjectCard 
+            projectThumbnail={forecastedFitBanner} 
+            title="ForecastedFit" 
+            description="ForecastedFit is an AI-powered weather outfit planner that helps you decide what to wear every day—based on real-time weather conditions and your personal style." 
+            projectUrl="https://www.forecastedfit.com/" 
+            tech="Flutter, Laravel, and MySQL" 
+            role="Full-stack developer — built the app's UI, API, and data flows."
+            buttonLabel="Download App"
+        />
 
         <ProjectCard 
             projectThumbnail={shortscribeDashboard} 
