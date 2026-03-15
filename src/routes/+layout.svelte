@@ -3,13 +3,15 @@
 	import reymar_favicon from '$lib/assets/reymar.svg';
 	import ProfileCard from '$lib/components/ProfileCard.svelte';
 	import reymar from '$lib/assets/reymar_2.jpg';
+	import { onMount } from 'svelte';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit'
-	import { dev } from '$app/environment';
+	import { browser, dev } from '$app/environment';
 
 	import type { NavType } from '$lib/types/NavType';
 	import NavCard from '$lib/components/NavCard.svelte';
 	
 	let { children } = $props();
+	let isDark = $state(false);
 
 	let navs: NavType[] = [
 		{ name: 'Home', href: '/', icon: 'fa-solid fa-house' },
@@ -18,29 +20,44 @@
 	]
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
+
+	function applyTheme() {
+		if (!browser) return;
+		document.documentElement.classList.toggle('dark', isDark);
+	}
+
+	function toggleTheme() {
+		isDark = !isDark;
+		applyTheme();
+		if (browser) {
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		}
+	}
+
+	onMount(() => {
+		const savedTheme = localStorage.getItem('theme');
+		isDark = savedTheme === 'dark';
+		applyTheme();
+	});
 </script>
 
 <svelte:head>
 	<link rel="icon" href={reymar_favicon} />
 </svelte:head>
 
-<div class="bg-gray-100 text-gray-900 dark:bg-[#121212] dark:text-[#d5d5d5] h-auto">
-	<div class="p-10">
-		<div class="flex flex-row gap-10">
-			<div class="basis-1/5">
-				<ProfileCard image={reymar} name={'Reymar Ocero'} />
-			</div>
-  			<div class="flex-1">
-				<main>
-					{@render children?.()}
-				</main>
-				
-			</div>
-			<div class="w-24 flex-none">
-				<NavCard navs={navs} />
-			</div>
-		</div>
-		
+<div class="min-h-screen px-4 py-6 md:px-8 md:py-10">
+	<div class="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 lg:grid-cols-[300px_1fr_92px]">
+		<aside class="lg:sticky lg:top-10 h-fit">
+			<ProfileCard image={reymar} name={'Reymar Ocero'} />
+		</aside>
+
+		<main class="surface-card p-6 md:p-8">
+			{@render children?.()}
+		</main>
+
+		<aside class="lg:sticky lg:top-10 h-fit">
+			<NavCard navs={navs} {isDark} onToggleTheme={toggleTheme} />
+		</aside>
 	</div>
 </div>
 

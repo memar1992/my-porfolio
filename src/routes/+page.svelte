@@ -1,6 +1,5 @@
 <script>
 	import reymar from '$lib/assets/reymar.png';
-    import syncapps from '$lib/assets/syncapps.png';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import ServiceCard from '$lib/components/ServiceCard.svelte';
     import login_animation_new from '$lib/assets/login_animation-min.png';
@@ -14,99 +13,79 @@
     import auto_invoice from '$lib/assets/auto_invoice.png';
 </script>
 
-<div class="rounded-sm dark:bg-[#1c1c1c] bg-[#f5f5f5] p-10 pb-0">
-	<div class="flex flex-row gap-3 relative">
-		<div class="basis-3/5 mb-10">
-			<div class="flex flex-col gap-7">
-				<h1 class="text-3xl font-bold">
-					I’m a freelance full-stack developer who builds practical, reliable software for real
-					businesses.
-				</h1>
-				<p class="dark:text-gray-400 text-gray-600">
-					I build web and mobile applications that help businesses work smarter. I’ve worked on
-					various custom tools and systems for automation and daily operations.
-				</p>
-				<div class="flex flex-row gap-10 items-center">
-					<a href="/contact" class="transition duration-300 ease-in-out rounded-full text-lime-500 dark:text-gray-900 bg-amber-100 dark:bg-lime-500 px-10 py-4 text-center font-bold cursor-pointer hover:bg-gray-800 hover:text-white block w-50">
-						Hire me
-                    </a>
-                    <div class="flex flex-row gap-5">
-                        <!-- Social Links -->
-                        <a href="https://github.com/memar1992/" target="_blank" rel="noopener"
-                        class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+<section class="surface-card overflow-hidden p-6 md:p-10">
+    <div class="grid items-end gap-8 lg:grid-cols-[1.35fr_0.65fr]">
+        <div class="flex flex-col gap-6">
+            <span class="w-fit rounded-full border border-zinc-900/20 bg-black/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-zinc-600 dark:border-white/20 dark:bg-white/5 dark:text-zinc-400">
+                Available for freelance projects
+            </span>
+            <h1 class="text-4xl font-semibold leading-tight md:text-5xl">
+                I build practical digital products with clean execution.
+            </h1>
+            <p class="max-w-2xl text-zinc-700 dark:text-zinc-300 md:text-lg">
+                I’m a full-stack developer focused on reliable business software—web apps, APIs, mobile experiences, and custom internal tools built for real operations.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="/contact" class="rounded-full border border-zinc-900 bg-zinc-900 px-8 py-3 text-sm font-semibold text-white hover:bg-transparent hover:text-zinc-900 dark:border-white dark:bg-white dark:text-black dark:hover:text-white">
+                    Start a Project
+                </a>
+                <div class="flex flex-row gap-3 text-xl text-zinc-500 dark:text-zinc-400">
+                    <a href="https://github.com/memar1992/" target="_blank" rel="noopener" aria-label="Visit GitHub profile" class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:hover:border-white dark:hover:text-white">
                         <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/reymar-ocero-b252a8131/" target="_blank" rel="noopener"
-                        class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+                    </a>
+                    <a href="https://www.linkedin.com/in/reymar-ocero-b252a8131/" target="_blank" rel="noopener" aria-label="Visit LinkedIn profile" class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:hover:border-white dark:hover:text-white">
                         <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.facebook.com/reymar.maagad.ocero" target="_blank" rel="noopener"
-                        class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+                    </a>
+                    <a href="https://www.facebook.com/reymar.maagad.ocero" target="_blank" rel="noopener" aria-label="Visit Facebook profile" class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:hover:border-white dark:hover:text-white">
                         <i class="fab fa-facebook"></i>
-                        </a>
-                    </div>
-				</div>
-			</div>
-		</div>
-		<div class="absolute right-0 bottom-0 basis-2/5">
-			<div class="w-70">
-				<img src={reymar} alt="Reymar Ocero" class="w-auto" />
-			</div>
-		</div>
-	</div>
-</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto flex h-full w-full max-w-xs items-end md:-mb-8 md:max-w-sm lg:-mb-14">
+            <img src={reymar} alt="Reymar Ocero" class="block w-full object-contain grayscale contrast-125" />
+        </div>
+    </div>
+</section>
 
-<section class="py-16">
-	<div class="text-center">
-        <div class="flex justify-center px-6 text-center mb-10">
-            <div class="flex flex-col gap-2 w-1/2">
-                <h2 class="text-3xl font-bold">My Services</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    Whether you need a new app, a system upgrade, or a tool built just for your workflow, I can help bring it to life.
-                </p>
-            </div>
-        </div>
-		<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-			<!-- Service 1 -->
-             <ServiceCard title="Web Application Development" description="Custom business systems and dashboards using Laravel, Vue, Svelte, or React." iconName="code" />
-            <!-- Service 2 -->
-             <ServiceCard title="Mobile App Development" description="Cross-platform mobile apps using React Native or Ionic." iconName="mobile-alt" />
-            <!-- Service 3 -->
-             <ServiceCard title="Backend & API Development" description="Secure APIs, integrations, and backend automation." iconName="users-gear" />
-            <!-- Service 4 -->
-             <ServiceCard title="System Maintenance & Optimization" description="Fix bugs, add new features, and keep your system running smoothly." iconName="screwdriver-wrench" />
-            <!-- Service 5 -->
-             <ServiceCard title="Plugin & Integration Development" description="Custom plugins and connectors for tools like Capacitor or internal platforms." iconName="puzzle-piece" />
-            <!-- Service 6 -->
-            <ServiceCard title="Custom Development Services" description="Custom-built software that solves your real problems, not just adds more tools." isCustom={true} iconName="laptop-file" />
-		</div>
-        <div class="flex justify-center px-6 text-center my-10">
-            <div class="flex flex-col gap-2 w-1/2">
-                <h2 class="text-3xl font-bold">Other Services</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    I also offer creative and visual services to support your brand or product.
-                </p>
-            </div>
-        </div>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <ServiceCard title="Logo & Branding Design" description="Simple, memorable logos that capture your brand’s identity." iconName="palette" />
-            <ServiceCard title="Animation & Motion Design" description="Smooth, modern animations using Lottie for web and mobile apps." iconName="film" />
-            <ServiceCard title="Video Editing" description="Clean, professional edits for demos, social content, or presentations." iconName="video" />
-        </div>
-	</div>
+<section class="py-14 md:py-16">
+    <div class="mb-10 flex flex-col gap-3">
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle">
+            From product MVPs to production-ready systems, I help teams ship useful software with maintainable architecture and clear UX.
+        </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <ServiceCard title="Web Application Development" description="Custom business systems and dashboards using Laravel, Vue, Svelte, or React." iconName="code" />
+        <ServiceCard title="Mobile App Development" description="Cross-platform mobile apps using React Native or Ionic." iconName="mobile-alt" />
+        <ServiceCard title="Backend & API Development" description="Secure APIs, integrations, and backend automation." iconName="users-gear" />
+        <ServiceCard title="System Maintenance & Optimization" description="Fix bugs, add new features, and keep your system running smoothly." iconName="screwdriver-wrench" />
+        <ServiceCard title="Plugin & Integration Development" description="Custom plugins and connectors for tools like Capacitor or internal platforms." iconName="puzzle-piece" />
+        <ServiceCard title="Custom Development Services" description="Custom-built software that solves your real problems, not just adds more tools." isCustom={true} iconName="laptop-file" />
+    </div>
+
+    <div class="mb-10 mt-14 flex flex-col gap-3">
+        <h2 class="section-title">Creative Services</h2>
+        <p class="section-subtitle">
+            I also support product storytelling through branding, motion design, and edited visual content.
+        </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <ServiceCard title="Logo & Branding Design" description="Simple, memorable logos that capture your brand identity." iconName="palette" />
+        <ServiceCard title="Animation & Motion Design" description="Modern Lottie-based animations optimized for web and mobile." iconName="film" />
+        <ServiceCard title="Video Editing" description="Clean and professional edits for demos, social media, and presentations." iconName="video" />
+    </div>
 </section>
 
 <section>
-    <div class="flex justify-center px-6 text-center mb-10">
-        <div class="flex flex-col gap-2 w-1/2">
-            <h2 class="text-3xl font-bold">My Projects</h2>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">
-                Selected projects that showcase my experience in full-stack web and mobile development.
-            </p>
-        </div>
+    <div class="mb-10 flex flex-col gap-3">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-subtitle">
+            A curated set of production work across AI products, integrations, business systems, and mobile applications.
+        </p>
     </div>
 
-    <div class="mx-auto flex flex-col gap-10">
+    <div class="mx-auto flex flex-col gap-8">
 
         <ProjectCard 
             projectThumbnail={forecastedFitBanner} 
@@ -181,15 +160,13 @@
         />
     </div>
 
-    <div class="flex justify-center px-6 text-center my-10">
-        <div class="flex flex-col gap-2 w-1/2">
-            <h2 class="text-3xl font-bold">Other Projects (Creative Work)</h2>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">
-                A look into my creative side — where I explore animation, motion design, and video editing to bring more life and personality into digital projects.
-            </p>
-        </div>
+    <div class="mb-10 mt-14 flex flex-col gap-3">
+        <h2 class="section-title">Creative Work</h2>
+        <p class="section-subtitle">
+            Projects focused on motion, storytelling, and interaction polish to elevate digital product experiences.
+        </p>
     </div>
-    <div class="mx-auto flex flex-col gap-10">
+    <div class="mx-auto flex flex-col gap-8">
         <ProjectCard 
             projectThumbnail={login_animation_new} 
             title="SyncApps Login Animation" 

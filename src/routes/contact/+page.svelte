@@ -1,7 +1,6 @@
-<div class="rounded-sm dark:bg-[#1c1c1c] bg-[#f5f5f5] p-10 py-10">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
-      <p class="text-gray-600 dark:text-gray-400 mb-10">
+<div class="surface-card mx-auto max-w-4xl p-8 md:p-10 text-center">
+      <h2 class="section-title mb-4">Get in Touch</h2>
+  <p class="mx-auto mb-10 max-w-2xl text-zinc-600 dark:text-zinc-400">
         Have a project in mind or want to collaborate? Feel free to reach out — I’d love to hear from you.
       </p>
   
@@ -9,34 +8,36 @@
       <form
         action="https://formspree.io/f/mldpqkvq"
         method="POST"
-        class="bg-white dark:bg-stone-900 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-8 max-w-2xl mx-auto"
+        class="mx-auto max-w-2xl rounded-2xl border border-zinc-900/15 bg-black/5 p-8 dark:border-white/15 dark:bg-black/40"
       >
         <div class="grid gap-6">
           <div class="text-left">
-            <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Your Email</label>
+            <label for="email" class="mb-2 block text-sm font-medium text-zinc-700 dark:text-zinc-300">Your Email</label>
             <input
+              id="email"
               type="email"
               name="email"
               required
-              class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-[#222] text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-lime-500 transition duration-300"
+              class="w-full rounded-lg border border-zinc-900/20 bg-white p-3 text-zinc-900 focus:border-zinc-900 focus:outline-none dark:border-white/15 dark:bg-white/5 dark:text-zinc-100 dark:focus:border-white"
               placeholder="you@example.com"
             />
           </div>
   
           <div class="text-left">
-            <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Your Message</label>
+            <label for="message" class="mb-2 block text-sm font-medium text-zinc-700 dark:text-zinc-300">Your Message</label>
             <textarea
+              id="message"
               name="message"
               required
               rows="5"
-              class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-[#222] text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-lime-500 transition duration-300"
+              class="w-full rounded-lg border border-zinc-900/20 bg-white p-3 text-zinc-900 focus:border-zinc-900 focus:outline-none dark:border-white/15 dark:bg-white/5 dark:text-zinc-100 dark:focus:border-white"
               placeholder="Type your message here..."
             ></textarea>
           </div>
   
           <button
             type="submit"
-            class="w-full py-3 mt-4 rounded-lg bg-lime-500 text-white font-semibold hover:bg-lime-600 transition-all duration-300"
+            class="mt-4 w-full rounded-lg border border-zinc-900 bg-zinc-900 py-3 font-semibold text-white hover:bg-transparent hover:text-zinc-900 dark:border-white dark:bg-white dark:text-black dark:hover:text-white"
           >
             Send Message
           </button>
@@ -44,24 +45,26 @@
       </form>
   
       <!-- Social Links -->
-      <div class="flex justify-center gap-6 mt-10">
+      <div class="mt-10 flex justify-center gap-4">
         <a href="https://github.com/memar1992/" target="_blank" rel="noopener"
-          class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+          aria-label="Visit GitHub profile"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 text-zinc-500 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:text-zinc-400 dark:hover:border-white dark:hover:text-white">
           <i class="fab fa-github"></i>
         </a>
         <a href="https://www.linkedin.com/in/reymar-ocero-b252a8131/" target="_blank" rel="noopener"
-          class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+          aria-label="Visit LinkedIn profile"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 text-zinc-500 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:text-zinc-400 dark:hover:border-white dark:hover:text-white">
           <i class="fab fa-linkedin"></i>
         </a>
         <a href="https://www.facebook.com/reymar.maagad.ocero" target="_blank" rel="noopener"
-          class="text-gray-600 dark:text-gray-300 hover:text-lime-500 transition duration-300 text-2xl">
+          aria-label="Visit Facebook profile"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 text-zinc-500 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:text-zinc-400 dark:hover:border-white dark:hover:text-white">
           <i class="fab fa-facebook"></i>
         </a>
       </div>
   
-      <p class="text-sm text-gray-500 dark:text-gray-500 mt-8">
+      <p class="mt-8 text-sm text-zinc-500 dark:text-zinc-500">
         © 2025 Reymar Ocero. All rights reserved.
       </p>
-    </div>
 </div>
   

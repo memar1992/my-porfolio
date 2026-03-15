@@ -7,25 +7,25 @@
 
 {#if !isCustom}
     <div
-        class="bg-white dark:bg-[#1c1c1c] p-6 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1"
+        class="surface-card p-6 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-zinc-900/25 hover:bg-black/5 dark:hover:border-white/25 dark:hover:bg-white/10"
     >
-        <div class="text-lime-600 mb-4 text-3xl">
+        <div class="mb-4 text-3xl text-zinc-900 dark:text-white">
             <i class="fas fa-{iconName}"></i>
         </div>
-        <h3 class="text-xl font-semibold mb-2">{title}</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm">
+        <h3 class="mb-2 text-xl font-semibold text-zinc-900 dark:text-white">{title}</h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400">
             {description}
         </p>
     </div>
 {:else}
     <div
-    class="bg-gray-100 dark:bg-lime-500 p-6 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1"
+    class="rounded-2xl border border-zinc-900 bg-zinc-900 p-6 text-white shadow-[0_0_24px_rgba(0,0,0,0.18)] transition-all duration-300 ease-in-out hover:-translate-y-1 dark:border-white dark:bg-white dark:text-black dark:shadow-[0_0_24px_rgba(255,255,255,0.2)]"
     >
-        <div class="text-lime-600 dark:text-lime-800 mb-4 text-3xl">
+        <div class="mb-4 text-3xl text-white dark:text-black">
             <i class="fas fa-laptop-file"></i>
         </div>
-        <h3 class="text-xl font-semibold mb-2 dark:text-gray-800">{title}</h3>
-        <p class="text-gray-600 dark:text-gray-900 text-sm">
+        <h3 class="mb-2 text-xl font-semibold text-white dark:text-black">{title}</h3>
+        <p class="text-sm text-white/75 dark:text-black/70">
             {description}
         </p>
     </div>

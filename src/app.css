@@ -1,3 +1,51 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+	html,
+	body {
+		@apply bg-zinc-100 text-zinc-900 antialiased dark:bg-black dark:text-zinc-100;
+	}
+
+	body {
+		@apply min-h-screen;
+		background-image: radial-gradient(circle at top, #f5f5f5 0%, #ededed 45%, #e5e5e5 100%);
+	}
+
+	html.dark body {
+		background-image: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 45%, #050505 100%);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-zinc-950 tracking-tight dark:text-white;
+	}
+
+	p {
+		@apply text-zinc-700 dark:text-zinc-300;
+	}
+
+	a {
+		@apply transition-colors duration-200;
+	}
+}
+
+@layer components {
+	.surface-card {
+		@apply rounded-2xl border border-zinc-900/10 bg-white/70 backdrop-blur-sm dark:border-white/10 dark:bg-white/5;
+	}
+
+	.section-title {
+		@apply text-3xl md:text-4xl font-semibold;
+	}
+
+	.section-subtitle {
+		@apply max-w-3xl text-sm md:text-base text-zinc-600 dark:text-zinc-400;
+	}
+}

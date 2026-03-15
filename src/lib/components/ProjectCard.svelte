@@ -10,38 +10,42 @@
     export let isHideButton:boolean = false;
 </script>
 
-<div class="grid lg:grid-cols-2 items-center rounded-sm overflow-hidden">
+<div class="surface-card grid items-center overflow-hidden lg:grid-cols-2">
     <!-- Left content -->
-    <div class="bg-white dark:bg-[#1c1c1c] text-gray-100 p-10 h-full flex flex-col justify-center">
-        <h2 class="text-2xl font-bold mb-4 text-lime-600">
+    <div class="h-full p-8 md:p-10 flex flex-col justify-center">
+        <h2 class="mb-4 text-2xl font-semibold text-zinc-900 dark:text-white md:text-3xl">
             {title}
         </h2>
-        <p class="text-gray-400 mb-6">
+        <p class="mb-6 text-zinc-700 dark:text-zinc-300">
             {description}
         </p>
 
         {#if !isHideButton}
-        <a href="{projectUrl}" target="_blank" class="text-white font-semibold inline-flex items-center gap-1 hover:underline mb-6">
+        <a
+            href="{projectUrl}"
+            target="_blank"
+            class="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-zinc-900 bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-transparent hover:text-zinc-900 dark:border-white dark:bg-white dark:text-black dark:hover:text-white"
+        >
             {buttonLabel}
             <i class="fas fa-external-link-alt"></i>
         </a>
         {/if}
 
-        <div class="border-t border-gray-700 pt-4 mt-auto">
-            <p class="text-sm mb-4 text-gray-400"><span class="font-semibold text-gray-300">TECH:</span>
+        <div class="mt-auto border-t border-zinc-900/15 pt-4 dark:border-white/15">
+            <p class="mb-4 text-sm text-zinc-600 dark:text-zinc-400"><span class="font-semibold text-zinc-900 dark:text-zinc-100">TECH:</span>
                 {tech}
             </p>
         </div>
-        <div class="border-t border-gray-700 pt-4 mt-auto">
-            <p class="text-sm text-gray-400"><span class="font-semibold text-gray-300">ROLE:</span> 
+        <div class="border-t border-zinc-900/15 pt-4 dark:border-white/15">
+            <p class="text-sm text-zinc-600 dark:text-zinc-400"><span class="font-semibold text-zinc-900 dark:text-zinc-100">ROLE:</span> 
                 {role}
             </p>
         </div>
     </div>
 
     <!-- Right image -->
-    <div class="h-full w-full">
-        <img src={projectThumbnail} alt="{title}" class="w-full h-full object-cover object-left">
+    <div class="h-full w-full border-t border-zinc-900/10 lg:border-l lg:border-t-0 dark:border-white/10">
+        <img src={projectThumbnail} alt="{title}" class="h-full w-full object-cover object-left">
     </div>
 </div>
 

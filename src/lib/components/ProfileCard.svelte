@@ -5,20 +5,20 @@
     export let name:string = 'Reymar Ocero'
 </script>
 
-<div class="rounded-sm dark:bg-[#1c1c1c] bg-[#f5f5f5] p-5 h-full">
+<div class="surface-card p-5 h-full">
     <div class="flex flex-col px-2 gap-2">
         <div class="relative">
-            <div class="w-4 h-4 absolute bottom-[20px] right-[65px] bg-lime-600 rounded-full"></div>
-            <img src={image} alt={name} class="w-24 h-24 rounded-full mx-auto mb-2 object-cover border-1" />
+            <div class="w-4 h-4 absolute bottom-[20px] right-[65px] bg-black rounded-full ring-4 ring-white dark:bg-white dark:ring-black"></div>
+            <img src={image} alt={name} class="w-24 h-24 rounded-full mx-auto mb-2 object-cover border border-zinc-900/20 dark:border-white/20" />
         </div>
         
-        <span class="text-xl font-semibold text-center">{name}</span>
-        <span class="text-sm text-lime-600 text-center">
+        <span class="text-xl font-semibold text-center text-zinc-900 dark:text-white">{name}</span>
+        <span class="text-sm text-zinc-600 dark:text-zinc-400 text-center">
             Full-stack developer
         </span>
 
         <!-- list of skills -->
-        <span class="block mt-5 font-semibold text-gray-600">Programming Languages</span>
+        <span class="block mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-500">Programming Languages</span>
 
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard
@@ -38,22 +38,10 @@
                 percentage={'w-90/100 z-10'}
                 icon={'fa-brands fa-java'}
             />
-
-            <SkillDetailsCard
-                label={'HTML'}
-                percentage={'w-90/100 z-10'}
-                icon={'fa-brands fa-html5'}
-            />
-
-            <SkillDetailsCard
-                label={'CSS'}
-                percentage={'w-90/100 z-10'}
-                icon={'fa-brands fa-css3'}
-            />
             
         </div>
 
-        <span class="block mt-5 font-semibold text-gray-600">Frameworks Used</span>
+        <span class="block mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Frameworks Used</span>
 
         <div class="flex flex-col gap-8 mb-10">
 
@@ -118,7 +106,7 @@
             />
         </div>
 
-        <span class="block mt-5 font-semibold text-gray-600">Databases</span>
+        <span class="block mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Databases</span>
 
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard 
@@ -140,7 +128,7 @@
             />
         </div>
 
-        <span class="block mt-5 font-semibold text-gray-600">Servers</span>
+        <span class="block mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Servers</span>
 
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard 
@@ -156,7 +144,7 @@
             />
         </div>
 
-        <span class="block mt-5 font-semibold text-gray-600">Design tools</span>
+        <span class="block mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Design tools</span>
 
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard 
@@ -172,7 +160,7 @@
             />
         </div>
 
-        <span class="block mt-5 font-semibold text-gray-600">Version control</span>
+        <span class="block mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Version control</span>
 
         <div class="flex flex-col gap-8 mb-10">
             <SkillDetailsCard 
