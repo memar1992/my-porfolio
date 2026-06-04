@@ -1,190 +1,126 @@
-<script>
-	import reymar from '$lib/assets/reymar.png';
+<script lang="ts">
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import ServiceCard from '$lib/components/ServiceCard.svelte';
-    import login_animation_new from '$lib/assets/login_animation-min.png';
-    import cazoomi_video from '$lib/assets/cazoomi_video.png';
-    import syncapps_dashboard from '$lib/assets/syncapps_dashboard.png';
-    import shortscribeDashboard from '$lib/assets/shortscribe_dashboard_2.png'
-    import forecastedFitBanner from '$lib/assets/forecastedfit_banner.png';
-    import cazoomi_site from '$lib/assets/cazoomi_site.png';
-    import mobile_stl_app from '$lib/assets/mobile_stl_app.png';
-    import stl_admin from '$lib/assets/stl_admin.png';
-    import auto_invoice from '$lib/assets/auto_invoice.png';
+	import { featuredProjects } from '$lib/data/projects';
+	import { services } from '$lib/data/services';
 </script>
 
-<section class="surface-card overflow-hidden p-6 md:p-10">
-    <div class="grid items-end gap-8 lg:grid-cols-[1.35fr_0.65fr]">
-        <div class="flex flex-col gap-6">
-            <span class="w-fit rounded-full border border-zinc-900/20 bg-black/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-zinc-600 dark:border-white/20 dark:bg-white/5 dark:text-zinc-400">
-                Available for freelance projects
-            </span>
-            <h1 class="text-4xl font-semibold leading-tight md:text-5xl">
-                I build practical digital products with clean execution.
-            </h1>
-            <p class="max-w-2xl text-zinc-700 dark:text-zinc-300 md:text-lg">
-                I’m a full-stack developer focused on reliable business software—web apps, APIs, mobile experiences, and custom internal tools built for real operations.
-            </p>
-            <div class="flex flex-wrap items-center gap-4">
-                <a href="/contact" class="rounded-full border border-zinc-900 bg-zinc-900 px-8 py-3 text-sm font-semibold text-white hover:bg-transparent hover:text-zinc-900 dark:border-white dark:bg-white dark:text-black dark:hover:text-white">
-                    Start a Project
-                </a>
-                <div class="flex flex-row gap-3 text-xl text-zinc-500 dark:text-zinc-400">
-                    <a href="https://github.com/memar1992/" target="_blank" rel="noopener" aria-label="Visit GitHub profile" class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:hover:border-white dark:hover:text-white">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/reymar-ocero-b252a8131/" target="_blank" rel="noopener" aria-label="Visit LinkedIn profile" class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:hover:border-white dark:hover:text-white">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.facebook.com/reymar.maagad.ocero" target="_blank" rel="noopener" aria-label="Visit Facebook profile" class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:hover:border-white dark:hover:text-white">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="mx-auto flex h-full w-full max-w-xs items-end md:-mb-8 md:max-w-sm lg:-mb-14">
-            <img src={reymar} alt="Reymar Ocero" class="block w-full object-contain grayscale contrast-125" />
-        </div>
-    </div>
+<section class="section-wrap pt-10 md:pt-16">
+	<div class="surface-card p-8 md:p-12">
+		<span class="eyebrow">Simple software. Built properly.</span>
+		<h1 class="mt-6 max-w-4xl text-4xl leading-tight md:text-6xl">
+			Full-stack developer building practical software for real businesses.
+		</h1>
+		<p class="mt-6 max-w-3xl text-base leading-relaxed md:text-xl">
+			I help teams turn messy workflows into clean web apps, mobile apps, dashboards, APIs, and
+			automation tools.
+		</p>
+		<div class="mt-8 flex flex-wrap gap-3">
+			<a href="#featured-projects" class="button-primary">View Projects</a>
+			<a href="/contact" class="button-secondary">Contact Me</a>
+		</div>
+		<p class="stat-note"><i class="fa-solid fa-circle-check mr-2 text-[#0071e3]"></i>Available for freelance and contract work.</p>
+	</div>
 </section>
 
-<section class="py-14 md:py-16">
-    <div class="mb-10 flex flex-col gap-3">
-        <h2 class="section-title">Services</h2>
-        <p class="section-subtitle">
-            From product MVPs to production-ready systems, I help teams ship useful software with maintainable architecture and clear UX.
-        </p>
-    </div>
-    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <ServiceCard title="Web Application Development" description="Custom business systems and dashboards using Laravel, Vue, Svelte, or React." iconName="code" />
-        <ServiceCard title="Mobile App Development" description="Cross-platform mobile apps using React Native or Ionic." iconName="mobile-alt" />
-        <ServiceCard title="Backend & API Development" description="Secure APIs, integrations, and backend automation." iconName="users-gear" />
-        <ServiceCard title="System Maintenance & Optimization" description="Fix bugs, add new features, and keep your system running smoothly." iconName="screwdriver-wrench" />
-        <ServiceCard title="Plugin & Integration Development" description="Custom plugins and connectors for tools like Capacitor or internal platforms." iconName="puzzle-piece" />
-        <ServiceCard title="Custom Development Services" description="Custom-built software that solves your real problems, not just adds more tools." isCustom={true} iconName="laptop-file" />
-    </div>
+<section class="section-wrap border-t border-[#e5e5ea]">
+	<div class="github-card surface-card p-8 md:p-12">
+		<p class="eyebrow">GitHub Activity</p>
+		<h2 class="mt-5 text-3xl leading-tight md:text-4xl">Building consistently.</h2>
 
-    <div class="mb-10 mt-14 flex flex-col gap-3">
-        <h2 class="section-title">Creative Services</h2>
-        <p class="section-subtitle">
-            I also support product storytelling through branding, motion design, and edited visual content.
-        </p>
-    </div>
-    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <ServiceCard title="Logo & Branding Design" description="Simple, memorable logos that capture your brand identity." iconName="palette" />
-        <ServiceCard title="Animation & Motion Design" description="Modern Lottie-based animations optimized for web and mobile." iconName="film" />
-        <ServiceCard title="Video Editing" description="Clean and professional edits for demos, social media, and presentations." iconName="video" />
-    </div>
+		<div class="mt-6 overflow-x-auto rounded-xl border border-[#e5e5ea] bg-white p-4">
+			<img
+				src="https://ghchart.rshah.org/0A1020/memar1992"
+				alt="GitHub contribution chart"
+				class="min-w-[720px]"
+				loading="lazy"
+			/>
+		</div>
+	</div>
 </section>
 
-<section>
-    <div class="mb-10 flex flex-col gap-3">
-        <h2 class="section-title">Selected Projects</h2>
-        <p class="section-subtitle">
-            A curated set of production work across AI products, integrations, business systems, and mobile applications.
-        </p>
-    </div>
+<section id="featured-projects" class="section-wrap border-t border-[#e5e5ea]">
+	<div>
+		<h2 class="section-title">Featured projects</h2>
+		<p class="section-subtitle">
+			Focused product work built for real usage, clear operations, and long-term maintainability.
+		</p>
+	</div>
+	<div class="mt-8 grid gap-6 md:gap-8">
+		{#each featuredProjects as project}
+			<ProjectCard
+				name={project.name}
+				summary={project.summary}
+				role={project.role}
+				tech={project.tech}
+				url={project.url}
+				thumbnail={project.thumbnail}
+				hideCta={project.hideCta ?? false}
+				cta="See details"
+			/>
+		{/each}
+	</div>
+</section>
 
-    <div class="mx-auto flex flex-col gap-8">
+<section class="section-wrap border-t border-[#e5e5ea]">
+	<div>
+		<h2 class="section-title">What I build</h2>
+		<p class="section-subtitle">
+			Clear product scopes and stable implementation across web, mobile, and backend systems.
+		</p>
+	</div>
+	<div class="mt-8 grid gap-5 md:grid-cols-2">
+		{#each services as service}
+			<ServiceCard title={service.title} description={service.description} icon={service.icon} />
+		{/each}
+	</div>
+</section>
 
-        <ProjectCard 
-            projectThumbnail={forecastedFitBanner} 
-            title="ForecastedFit" 
-            description="ForecastedFit is an AI-powered weather outfit planner that helps you decide what to wear every day—based on real-time weather conditions and your personal style." 
-            projectUrl="https://www.forecastedfit.com/" 
-            tech="Flutter, Laravel, and MySQL" 
-            role="Full-stack developer — built the app's UI, API, and data flows."
-            buttonLabel="Download App"
-        />
+<section class="section-wrap border-t border-[#e5e5ea]">
+	<div class="surface-card p-8 md:p-12">
+		<h2 class="section-title">About</h2>
+		<p class="section-subtitle mt-5 max-w-4xl">
+			I’m Reymar, a full-stack developer focused on building software that is useful, stable, and easy
+			to maintain. I like working on real business problems: booking flows, dashboards, admin systems,
+			automation, APIs, mobile apps, and internal tools.
+		</p>
+	</div>
+</section>
 
-        <ProjectCard 
-            projectThumbnail={shortscribeDashboard} 
-            title="Shortscribe" 
-            description="Turn your ideas into viral short-form scripts in seconds. Shortscribe rewrites your text into catchy, natural, and ready-to-record scripts for YouTube Shorts, TikTok, and Facebook Reels." 
-            projectUrl="https://www.shortscribe.online/" 
-            tech="Svelte, ExpressJS, and Supabase" 
-            role="Backend and frontend developer — built rewrite logic with AI"
-            buttonLabel="Visit Site"
-        />
-
-        <ProjectCard 
-            projectThumbnail={syncapps_dashboard} 
-            title="SyncApps Integration Platform" 
-            description="A cloud-based platform that automates data synchronization between business apps, reducing manual work and errors. Built scalable backend flows and dashboards for managing integrations efficiently." 
-            projectUrl="https://syncapps.cazoomi.com/login" 
-            tech="Java (Play Framework), HTML, Alpine JS, PostgreSQL" 
-            role="Backend and frontend developer — built automation logic, data sync flows, and internal dashboards."
-            buttonLabel="Visit Site"
-        />
-
-        <ProjectCard 
-            projectThumbnail={cazoomi_site} 
-            title="Cazoomi.com" 
-            description="Corporate website for SyncApps by Cazoomi, showcasing products, pricing, and support." 
-            projectUrl="https://www.cazoomi.com/" 
-            tech="HTML, CSS, JavaScript, WordPress" 
-            role="Full-stack developer — optimized loading speed, improved SEO, and built responsive layouts."
-            buttonLabel="Visit Site"
-        />
-
-        <ProjectCard 
-            projectThumbnail={mobile_stl_app} 
-            title="STL Mobile Betting App" 
-            description="Mobile app used by STL agents and bettors for submitting results and tracking daily reports." 
-            projectUrl="/#" 
-            tech="Laravel API, React, Ionic, Capacitor" 
-            role="Lead Mobile developer, API integration, and Lead UX/UI designer."
-            buttonLabel="Visit Site"
-            isHideButton={true}
-        />
-
-        <ProjectCard 
-            projectThumbnail={stl_admin} 
-            title="STL Admin System" 
-            description="Admin dashboard for Small Town Lottery operations, managing results, agents, and reporting." 
-            projectUrl="/#" 
-            tech="Laravel, Alpine JS, MySQL" 
-            role="Full-stack developer — built dashboards, role-based access, and analytics features."
-            buttonLabel="Visit Site"
-            isHideButton={true}
-        />
-
-        <ProjectCard 
-            projectThumbnail={auto_invoice} 
-            title="Auto Invoicing Command" 
-            description="A backend system that generates and emails invoices automatically based on usage and schedules." 
-            projectUrl="https://github.com/memar1992/invoice-generator" 
-            tech="NodeJS" 
-            role="Backend developer — built recurring billing logic, PDF generation, and email delivery."
-            buttonLabel="Checkout Repo"
-        />
-    </div>
-
-    <div class="mb-10 mt-14 flex flex-col gap-3">
-        <h2 class="section-title">Creative Work</h2>
-        <p class="section-subtitle">
-            Projects focused on motion, storytelling, and interaction polish to elevate digital product experiences.
-        </p>
-    </div>
-    <div class="mx-auto flex flex-col gap-8">
-        <ProjectCard 
-            projectThumbnail={login_animation_new} 
-            title="SyncApps Login Animation" 
-            description="Created a smooth login animation using Lottie to make the user experience more engaging and modern. Focused on clean motion, lightweight performance, and visual flow that complements the brand’s simplicity." 
-            projectUrl="https://cdn.lottielab.com/l/7dpcHjQG7fq9gP.html" 
-            tech="Lottie, JSON Animation, HTML" 
-            role="Motion designer & front-end developer — integrated and optimized the animation for web."
-            buttonLabel="View animation"
-        />
-
-        <ProjectCard 
-            projectThumbnail={cazoomi_video} 
-            title="Cazoomi Video" 
-            description="Edited and produced a company video that introduces integration features and product highlights. Combined motion graphics, subtle transitions, and sound design to create a clear, professional story for the brand." 
-            projectUrl="https://www.youtube.com/@SyncAppsbyCazoomi" 
-            tech="Adobe Premiere Pro, After Effects, Lottie" 
-            role="Video editor & motion designer — handled editing, animation, and overall creative direction."
-            buttonLabel="View Videos"
-        />
-    </div>
+<section class="section-wrap border-t border-[#e5e5ea]">
+	<div>
+		<h2 class="section-title">Tech stack</h2>
+		<p class="section-subtitle">Tools I use to ship production-ready software across product layers.</p>
+	</div>
+	<div class="mt-8 grid gap-5 md:grid-cols-2">
+		<div class="surface-card p-6">
+			<h3 class="text-lg"><i class="fa-solid fa-code mr-2 text-[#0071e3]"></i>Frontend</h3>
+			<p class="mt-2 text-sm text-[#6e6e73]">React, Svelte, Vue, Alpine</p>
+		</div>
+		<div class="surface-card p-6">
+			<h3 class="text-lg"><i class="fa-solid fa-database mr-2 text-[#0071e3]"></i>Backend</h3>
+			<p class="mt-2 text-sm text-[#6e6e73]">Laravel, Node.js, Express, NestJS, Play Framework</p>
+		</div>
+		<div class="surface-card p-6">
+			<h3 class="text-lg"><i class="fa-solid fa-mobile-screen-button mr-2 text-[#0071e3]"></i>Mobile</h3>
+			<p class="mt-2 text-sm text-[#6e6e73]">Ionic, Capacitor, React Native, Flutter</p>
+		</div>
+		<div class="surface-card p-6">
+			<h3 class="text-lg"><i class="fa-solid fa-server mr-2 text-[#0071e3]"></i>Database</h3>
+			<p class="mt-2 text-sm text-[#6e6e73]">MySQL, PostgreSQL, Supabase</p>
+		</div>
+		<div class="surface-card p-6 md:col-span-2">
+			<h3 class="text-lg"><i class="fa-solid fa-toolbox mr-2 text-[#0071e3]"></i>Tools</h3>
+			<p class="mt-2 text-sm text-[#6e6e73]">GitHub, Bitbucket, AWS, Figma</p>
+		</div>
+	</div>
+</section>
+<section class="section-wrap border-t border-[#e5e5ea] pb-6 md:pb-10">
+	<div class="surface-card p-8 text-center md:p-12">
+		<h2 class="section-title">Have a project in mind?</h2>
+		<p class="mx-auto mt-4 max-w-2xl text-base text-[#6e6e73] md:text-lg">
+			Tell me what you’re trying to build, improve, or automate.
+		</p>
+		<a href="/contact" class="button-primary mt-8">Contact Me</a>
+	</div>
 </section>

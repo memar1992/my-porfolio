@@ -1,70 +1,47 @@
-<div class="surface-card mx-auto max-w-4xl p-8 md:p-10 text-center">
-      <h2 class="section-title mb-4">Get in Touch</h2>
-  <p class="mx-auto mb-10 max-w-2xl text-zinc-600 dark:text-zinc-400">
-        Have a project in mind or want to collaborate? Feel free to reach out — I’d love to hear from you.
-      </p>
-  
-      <!-- Contact form -->
-      <form
-        action="https://formspree.io/f/mldpqkvq"
-        method="POST"
-        class="mx-auto max-w-2xl rounded-2xl border border-zinc-900/15 bg-black/5 p-8 dark:border-white/15 dark:bg-black/40"
-      >
-        <div class="grid gap-6">
-          <div class="text-left">
-            <label for="email" class="mb-2 block text-sm font-medium text-zinc-700 dark:text-zinc-300">Your Email</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              required
-              class="w-full rounded-lg border border-zinc-900/20 bg-white p-3 text-zinc-900 focus:border-zinc-900 focus:outline-none dark:border-white/15 dark:bg-white/5 dark:text-zinc-100 dark:focus:border-white"
-              placeholder="you@example.com"
-            />
-          </div>
-  
-          <div class="text-left">
-            <label for="message" class="mb-2 block text-sm font-medium text-zinc-700 dark:text-zinc-300">Your Message</label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows="5"
-              class="w-full rounded-lg border border-zinc-900/20 bg-white p-3 text-zinc-900 focus:border-zinc-900 focus:outline-none dark:border-white/15 dark:bg-white/5 dark:text-zinc-100 dark:focus:border-white"
-              placeholder="Type your message here..."
-            ></textarea>
-          </div>
-  
-          <button
-            type="submit"
-            class="mt-4 w-full rounded-lg border border-zinc-900 bg-zinc-900 py-3 font-semibold text-white hover:bg-transparent hover:text-zinc-900 dark:border-white dark:bg-white dark:text-black dark:hover:text-white"
-          >
-            Send Message
-          </button>
-        </div>
-      </form>
-  
-      <!-- Social Links -->
-      <div class="mt-10 flex justify-center gap-4">
-        <a href="https://github.com/memar1992/" target="_blank" rel="noopener"
-          aria-label="Visit GitHub profile"
-          class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 text-zinc-500 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:text-zinc-400 dark:hover:border-white dark:hover:text-white">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/reymar-ocero-b252a8131/" target="_blank" rel="noopener"
-          aria-label="Visit LinkedIn profile"
-          class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 text-zinc-500 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:text-zinc-400 dark:hover:border-white dark:hover:text-white">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.facebook.com/reymar.maagad.ocero" target="_blank" rel="noopener"
-          aria-label="Visit Facebook profile"
-          class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-900/15 bg-black/5 text-zinc-500 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/15 dark:bg-white/5 dark:text-zinc-400 dark:hover:border-white dark:hover:text-white">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </div>
-  
-      <p class="mt-8 text-sm text-zinc-500 dark:text-zinc-500">
-        © 2025 Reymar Ocero. All rights reserved.
-      </p>
-</div>
-  
+<section class="section-wrap pt-10 md:pt-14">
+	<div class="surface-card p-8 md:p-12">
+		<span class="eyebrow">Contact</span>
+		<h1 class="mt-6 max-w-3xl text-4xl leading-tight md:text-5xl">Let’s talk about your project.</h1>
+		<p class="mt-6 max-w-3xl text-base leading-relaxed md:text-lg">
+			Tell me what you’re trying to build, improve, or automate. I’ll reply with a clear and practical
+			next step.
+		</p>
+	</div>
+</section>
+
+<section class="section-wrap border-t border-[#e5e5ea] pb-8 md:pb-12">
+	<div class="surface-card p-7 md:p-10">
+		<form action="https://formspree.io/f/mldpqkvq" method="POST" class="grid gap-6">
+			<div>
+				<label for="email" class="mb-2 block text-sm font-semibold text-[#1d1d1f]">Your Email</label>
+				<input
+					id="email"
+					type="email"
+					name="email"
+					required
+					placeholder="you@example.com"
+					class="w-full rounded-xl border border-[#e5e5ea] bg-white px-4 py-3 text-[#1d1d1f] focus:border-[#0071e3] focus:ring-0"
+				/>
+			</div>
+
+			<div>
+				<label for="message" class="mb-2 block text-sm font-semibold text-[#1d1d1f]">Your Message</label>
+				<textarea
+					id="message"
+					name="message"
+					required
+					rows="6"
+					placeholder="Share a quick overview of your project goals."
+					class="w-full rounded-xl border border-[#e5e5ea] bg-white px-4 py-3 text-[#1d1d1f] focus:border-[#0071e3] focus:ring-0"
+				></textarea>
+			</div>
+
+			<div class="flex flex-wrap items-center gap-3 pt-2">
+				<button type="submit" class="button-primary">Send Message</button>
+				<a href="https://www.linkedin.com/in/reymar-ocero-b252a8131/" class="button-secondary" target="_blank" rel="noopener noreferrer">
+					LinkedIn
+				</a>
+			</div>
+		</form>
+	</div>
+</section>

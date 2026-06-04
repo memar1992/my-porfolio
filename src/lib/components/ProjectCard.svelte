@@ -1,51 +1,37 @@
 <script lang="ts">
-    import syncapss from '$lib/assets/syncapps.png';
-    export let projectThumbnail:string = syncapss;
-    export let title:string = 'My Project';
-    export let description:string = 'My Project Description';
-    export let projectUrl:string = '/';
-    export let tech:string = 'Java, HTML, PostgreSQL';
-    export let role:string = 'Backend Developer';
-    export let buttonLabel:string = 'Visit Site';
-    export let isHideButton:boolean = false;
+	export let thumbnail = '';
+	export let name = 'Project Name';
+	export let summary = 'One sentence summary of the project outcome.';
+	export let role = 'Full-stack developer';
+	export let tech: string[] = [];
+	export let url = '/';
+	export let cta = 'View case study';
+	export let hideCta = false;
 </script>
 
-<div class="surface-card grid items-center overflow-hidden lg:grid-cols-2">
-    <!-- Left content -->
-    <div class="h-full p-8 md:p-10 flex flex-col justify-center">
-        <h2 class="mb-4 text-2xl font-semibold text-zinc-900 dark:text-white md:text-3xl">
-            {title}
-        </h2>
-        <p class="mb-6 text-zinc-700 dark:text-zinc-300">
-            {description}
-        </p>
+<article class="surface-card overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_rgba(15,23,42,0.08)]">
+	<div class="grid gap-0 lg:grid-cols-[1.2fr_0.8fr]">
+		<div class="p-7 md:p-9">
+			<h3 class="text-2xl leading-tight md:text-[1.75rem]">{name}</h3>
+			<p class="mt-3 text-base leading-relaxed text-[#6e6e73]">{summary}</p>
 
-        {#if !isHideButton}
-        <a
-            href="{projectUrl}"
-            target="_blank"
-            class="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-zinc-900 bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-transparent hover:text-zinc-900 dark:border-white dark:bg-white dark:text-black dark:hover:text-white"
-        >
-            {buttonLabel}
-            <i class="fas fa-external-link-alt"></i>
-        </a>
-        {/if}
+			<div class="mt-6 border-t border-[#e5e5ea] pt-4 text-sm text-[#6e6e73]">
+				<p><span class="font-semibold text-[#1d1d1f]">My role:</span> {role}</p>
+			</div>
+			<div class="mt-3 border-t border-[#e5e5ea] pt-4 text-sm text-[#6e6e73]">
+				<p><span class="font-semibold text-[#1d1d1f]">Tech stack:</span> {tech.join(', ')}</p>
+			</div>
 
-        <div class="mt-auto border-t border-zinc-900/15 pt-4 dark:border-white/15">
-            <p class="mb-4 text-sm text-zinc-600 dark:text-zinc-400"><span class="font-semibold text-zinc-900 dark:text-zinc-100">TECH:</span>
-                {tech}
-            </p>
-        </div>
-        <div class="border-t border-zinc-900/15 pt-4 dark:border-white/15">
-            <p class="text-sm text-zinc-600 dark:text-zinc-400"><span class="font-semibold text-zinc-900 dark:text-zinc-100">ROLE:</span> 
-                {role}
-            </p>
-        </div>
-    </div>
+			{#if !hideCta}
+				<a class="button-secondary mt-6" href={url} target="_blank" rel="noopener noreferrer">
+					{cta}
+				</a>
+			{/if}
+		</div>
 
-    <!-- Right image -->
-    <div class="h-full w-full border-t border-zinc-900/10 lg:border-l lg:border-t-0 dark:border-white/10">
-        <img src={projectThumbnail} alt="{title}" class="h-full w-full object-cover object-left">
-    </div>
-</div>
+		<div class="border-t border-[#e5e5ea] bg-[#f8f8fa] p-4 lg:border-t-0 lg:border-l">
+			<img class="h-full w-full rounded-xl border border-[#e5e5ea] object-cover" src={thumbnail} alt={name} loading="lazy" />
+		</div>
+	</div>
+</article>
 
